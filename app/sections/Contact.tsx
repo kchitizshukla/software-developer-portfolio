@@ -217,6 +217,18 @@ export default function Contact() {
                 />
               </div>
 
+              {/* Honeypot: hidden from people, tempting to bots. */}
+              <div className="absolute -left-[9999px]" aria-hidden="true">
+                <label htmlFor="company">Company (leave this empty)</label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
               <button
                 type="submit"
                 disabled={status === "loading"}

@@ -46,19 +46,31 @@ npm run lint
 
 Copy `.env.example` to `.env.local` and fill in what you need:
 
-| Variable               | Purpose                                                                |
-| ---------------------- | ---------------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | Canonical URL used for SEO metadata, `sitemap.xml` and `robots.txt`.    |
-| `RESEND_API_KEY`       | Optional. Enables real email delivery from the contact form via Resend. |
-| `CONTACT_FROM_EMAIL`   | Optional. Verified sender address for Resend.                           |
+| Variable               | Purpose                                                                    |
+| ---------------------- | -------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical URL used for SEO metadata, `sitemap.xml` and `robots.txt`.        |
+| `CONTACT_TO_EMAIL`     | Inbox that receives contact-form messages. Defaults to `profile.email`.     |
+| `WEB3FORMS_ACCESS_KEY` | Provider option A. No account needed; the key is emailed to you.           |
+| `RESEND_API_KEY`       | Provider option B. Better deliverability, free tier.                       |
+| `CONTACT_FROM_EMAIL`   | Sender address for Resend. Defaults to `onboarding@resend.dev`.             |
 
-Without `RESEND_API_KEY` the contact form still works end to end — submissions are validated and logged server-side instead of emailed.
+### Making the contact form deliver mail
+
+The endpoint validates, rate-limits (5 messages per IP per 10 minutes) and filters bots via a honeypot field on its own. Delivery needs one provider key:
+
+**Option A — Web3Forms (fastest, no signup):** go to [web3forms.com](https://web3forms.com), enter your inbox address, and the access key arrives by email. Set it as `WEB3FORMS_ACCESS_KEY`.
+
+**Option B — Resend:** create an account at [resend.com](https://resend.com), make an API key, set it as `RESEND_API_KEY`. Without a verified domain, `onboarding@resend.dev` can only deliver to the address your Resend account uses, which is fine when that is your own inbox.
+
+Set the variable locally in `.env.local`, and on Vercel under **Project → Settings → Environment Variables** (then redeploy).
+
+With no provider configured, the form logs submissions in development and returns an honest "messaging is offline, email me directly" error in production, rather than pretending a message was delivered.
 
 ## Project Structure
 
 ```
 app/
-  api/contact/route.ts   # contact form endpoint (validation + optional Resend delivery)
+  api/contact/route.ts   # contact endpoint (validation, rate limit, honeypot, mail delivery)
   components/            # Navbar, Footer, Preloader, CursorGlow, ParticleField, Reveal, …
   sections/              # Hero, About, Skills, Projects, Experience, Contact
   data/profile.ts        # single source of truth for all content

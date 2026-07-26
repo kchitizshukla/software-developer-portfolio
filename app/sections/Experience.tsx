@@ -17,7 +17,7 @@ export default function Experience() {
         <SectionHeading
           eyebrow="Experience"
           title="Where I have shipped"
-          subtitle="Roles, timelines and the work that moved the numbers."
+          subtitle="roles, timelines and the work that moved the numbers."
         />
 
         <div className="relative mx-auto max-w-3xl">
