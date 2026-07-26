@@ -70,7 +70,7 @@ export default function Navbar() {
           <a
             href="#home"
             className="font-display group flex items-center gap-2 text-lg font-bold tracking-widest"
-            aria-label={`${profile.name} — home`}
+            aria-label={`${profile.name}, home`}
           >
             <span className="relative flex size-8 items-center justify-center rounded-lg border border-neon/40 bg-neon/5 text-neon shadow-[0_0_18px_-4px_#00f0ff] transition-transform duration-300 group-hover:scale-110">
               KS

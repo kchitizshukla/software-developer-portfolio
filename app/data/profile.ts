@@ -38,14 +38,14 @@ export const profile = {
     "AI-powered automation workflows",
   ],
   tagline:
-    "I build scalable web and mobile products end-to-end — from pixel-perfect React interfaces to high-throughput Node.js APIs.",
+    "I build scalable web and mobile products end-to-end, from pixel-perfect React interfaces to high-throughput Node.js APIs.",
   location: "New Delhi, India",
   email: "kchitizshukla@gmail.com",
   phone: "+91 63892 27183",
   github: "https://github.com/kchitizshukla",
   linkedin: "https://linkedin.com/in/kchitiz-shukla",
   resume: "/Kchitiz-Shukla-Resume.pdf",
-  avatar: "/images/kchitiz-shukla.jpeg",
+  avatar: "/images/kchitiz-shukla-portrait.jpeg",
   summary:
     "Results-driven Full-Stack Software Engineer with 1+ years of hands-on experience delivering scalable web and mobile applications using React.js, React Native, and .NET (ASP.NET Core), backed by SQL Server, PostgreSQL, and MongoDB. Shipped 10+ production screens and 2 enterprise applications within one year, including an in-house platform that cut software licensing costs by INR 85,000/month.",
   summarySecondary:
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     title: "FixMyRide",
     subtitle: "Cross-Platform Automotive Service Management System",
     description:
-      "A cross-platform application with two role-based modules — customer and mechanic — featuring real-time tracking, service booking and analytics dashboards across 15+ screens.",
+      "A cross-platform application with two role-based modules, customer and mechanic, featuring real-time tracking, service booking and analytics dashboards across 15+ screens.",
     highlights: [
       "End-to-end workflows for vehicle management, job assignments and inspections",
       "Payments and invoicing pipeline with responsive, optimized UI",

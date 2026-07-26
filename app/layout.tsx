@@ -21,12 +21,12 @@ const orbitron = Orbitron({
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://kchitiz-shukla.vercel.app";
-const description = `${profile.role} and Full-Stack Developer in ${profile.location}. React.js, React Native, Next.js, .NET and SQL — building scalable web and mobile products end to end.`;
+const description = `${profile.role} and Full-Stack Developer in ${profile.location}. React.js, React Native, Next.js, .NET and SQL. Building scalable web and mobile products end to end.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${profile.name} — ${profile.role}`,
+    default: `${profile.name} | ${profile.role}`,
     template: `%s | ${profile.name}`,
   },
   description,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: `${profile.name} — ${profile.role}`,
+    title: `${profile.name} | ${profile.role}`,
     description,
     siteName: `${profile.name} Portfolio`,
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — ${profile.role}`,
+    title: `${profile.name} | ${profile.role}`,
     description,
     images: [profile.avatar],
   },

@@ -157,7 +157,7 @@ export default function Projects() {
         <SectionHeading
           eyebrow="Projects"
           title="Things I have built"
-          subtitle="Production systems and side projects — each one shipped, measured and used by real people."
+          subtitle="Production systems and side projects, each one shipped, measured and used by real people."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

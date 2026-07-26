@@ -66,7 +66,7 @@ app/
   layout.tsx             # fonts, SEO metadata, JSON-LD, chrome
   page.tsx               # section composition
 public/
-  images/kchitiz-shukla.jpeg   # portrait
+  images/kchitiz-shukla-portrait.jpeg   # portrait
   Kchitiz-Shukla-Resume.pdf
 ```
 
@@ -74,7 +74,7 @@ public/
 
 All copy — bio, skills, projects, experience, education, links — lives in [`app/data/profile.ts`](app/data/profile.ts). Change it there and every section updates.
 
-To swap the portrait, replace `public/images/kchitiz-shukla.jpeg` (and give it a new filename if browsers cache the old one). To swap the resume, replace `public/Kchitiz-Shukla-Resume.pdf` (or update `profile.resume`).
+To swap the portrait, replace `public/images/kchitiz-shukla-portrait.jpeg` (and give it a new filename if browsers cache the old one). To swap the resume, replace `public/Kchitiz-Shukla-Resume.pdf` (or update `profile.resume`).
 
 ## Deploy on Vercel
 

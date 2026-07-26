@@ -16,7 +16,7 @@ const pillars = [
   {
     Icon: CodeXml,
     title: "Full-Stack Delivery",
-    body: "React.js and .NET across the whole stack — from component design to stored procedures and CI/CD.",
+    body: "React.js and .NET across the whole stack, from component design to stored procedures and CI/CD.",
   },
   {
     Icon: Smartphone,

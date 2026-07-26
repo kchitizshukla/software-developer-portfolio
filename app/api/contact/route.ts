@@ -67,7 +67,7 @@ export async function POST(request: Request) {
     } catch (err) {
       console.error("[contact] delivery failed:", err);
       return NextResponse.json(
-        { error: "Could not send right now — please email me directly." },
+        { error: "Could not send right now. Please email me directly." },
         { status: 502 },
       );
     }
@@ -76,6 +76,6 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({
-    message: "Thanks for reaching out — I'll get back to you shortly.",
+    message: "Thanks for reaching out! I'll get back to you shortly.",
   });
 }

@@ -73,7 +73,7 @@ export default function Skills() {
         <SectionHeading
           eyebrow="Skills"
           title="Tools I reach for"
-          subtitle="Grouped by where they sit in the stack — with the depth I actually work at day to day."
+          subtitle="Grouped by where they sit in the stack, with the depth I actually work at day to day."
         />
 
         <Reveal>
