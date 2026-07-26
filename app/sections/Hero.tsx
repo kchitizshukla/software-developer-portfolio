@@ -64,10 +64,20 @@ export default function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.08 }}
-              className="font-display mt-6 text-4xl leading-[1.08] font-bold tracking-tight sm:text-5xl md:text-6xl xl:text-7xl"
+              className="font-display mt-6 leading-[1.05] font-bold tracking-tight"
             >
-              <span className="block text-foreground/90">Hi, I&apos;m</span>
-              <span className="gradient-text block">{profile.name}</span>
+              <span className="block text-xl font-medium text-muted sm:text-2xl">
+                Hi, I&apos;m
+              </span>
+              <span className="relative mt-1 block">
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-0 -inset-y-6 -z-10 bg-neon/10 blur-3xl"
+                />
+                <span className="name-shine block text-5xl sm:text-6xl md:text-7xl xl:text-[5.5rem]">
+                  {profile.name}
+                </span>
+              </span>
             </motion.h1>
 
             <motion.div
