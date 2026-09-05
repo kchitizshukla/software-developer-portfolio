@@ -166,8 +166,8 @@ export default function Hero() {
                   <Image
                     src={profile.avatar}
                     alt={`Portrait of ${profile.name}`}
-                    width={900}
-                    height={1600}
+                    width={832}
+                    height={1280}
                     priority
                     sizes="(max-width: 1024px) 80vw, 400px"
                     className="h-auto w-full object-cover"
